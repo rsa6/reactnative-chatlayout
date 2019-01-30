@@ -33,6 +33,41 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 30
   },
+
+
+  rowFront: {
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderBottomColor: '#ceaeb3',
+    borderBottomWidth: 1,
+    justifyContent: 'center',
+    height: 80,
+  },
+  rowBack: {
+    alignItems: 'center',
+    backgroundColor: '#ae7f86',
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingLeft: 15,    
+  },
+  backRightBtn: {
+    alignItems: 'center',
+    bottom: 0,
+    justifyContent: 'center',
+    position: 'absolute',
+    top: 0,
+    width: 75,
+  },
+  backRightBtnLeft: {
+    backgroundColor: '#eccdd2',
+    right: 75,
+  },
+  backRightBtnRight: {
+    backgroundColor: '#c13f3f',
+    right: 0,
+  }
+
 });
 
 export default styles;

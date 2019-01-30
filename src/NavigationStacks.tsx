@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { MainScreen, FriendsScreen, ChatListScreen, NoneTabScreen, SettingsScreen } from './Main';
+import { MainScreen, FriendsScreen, ChatListScreen, ChatDetailScreen, SettingsScreen } from './Main';
 
 const FriendsStack = createStackNavigator(
   {
@@ -24,7 +24,7 @@ const FriendsStack = createStackNavigator(
 const ChatStack = createStackNavigator(
   {
     ChatList: ChatListScreen,
-    Deeper: NoneTabScreen
+    ChatDetails: ChatDetailScreen
   },
   {
     defaultNavigationOptions: {
@@ -49,7 +49,7 @@ ChatStack.navigationOptions = ({ navigation }: any) => {
   return {
     tabBarVisible,
   };
-};
+}; // none tab screen 
 
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen
