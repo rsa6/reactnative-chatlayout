@@ -27,14 +27,7 @@ const styles = StyleSheet.create({
     fontSize: 35,
     color: '#fff',
   },
-  box: {
-    backgroundColor: 'red',
-    width: 200,
-    height: 200,
-    borderRadius: 30
-  },
-
-
+  
   rowFront: {
     alignItems: 'center',
     backgroundColor: '#fff',
