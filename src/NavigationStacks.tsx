@@ -51,9 +51,24 @@ ChatStack.navigationOptions = ({ navigation }: any) => {
   };
 }; // none tab screen 
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen
-});
+const SettingsStack = createStackNavigator(
+  {
+    Settings: SettingsScreen
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: { 
+        backgroundColor: '#2d2d2d',
+        borderBottomWidth: 0
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      headerTitle: 'Setting'
+    },
+  }
+);
 
 const TabStack = createBottomTabNavigator(
   {
@@ -86,7 +101,6 @@ const TabStack = createBottomTabNavigator(
     },
   }
 )
-
 
 const RootStack = createStackNavigator(
   {

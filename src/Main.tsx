@@ -90,9 +90,9 @@ class ChatListScreen extends React.Component<NavigationProps, ChatListState> {
   }
 
   private arrayInit () {
-    let tempList = ['이브', '가브 & 고등어', '싱싱과 이브', '와인 한잔'];
+    let tempList: string[] = [];
     for (let i = 0; i < 20; i ++) {
-      tempList.push(`멍뭉이?`);
+      tempList.push(`안녕하세요?`);
     }
     return tempList;
   }  
@@ -155,13 +155,23 @@ class ChatListScreen extends React.Component<NavigationProps, ChatListState> {
         </View>
       )
     }
-
   }
+  
 }
 
+interface ChatDetailState {
+  data: string[];
+}
 
-class ChatDetailScreen extends React.Component<NavigationProps, object> {
-  render() {
+class ChatDetailScreen extends React.Component<NavigationProps, ChatDetailState> {
+  constructor(props: NavigationProps) {
+    super(props);
+    this.state = {
+      data: []
+    }
+  }
+
+  public render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text style={styles.textH1}>This is None TAB</Text>
@@ -177,7 +187,7 @@ class ChatDetailScreen extends React.Component<NavigationProps, object> {
 class SettingsScreen extends React.Component<NavigationProps, object> {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={styles.container}>
         {/* other code from before here */}
         <Button
           title="Go to Details"
